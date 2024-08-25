@@ -3,6 +3,10 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { v4 as uuidv4 } from 'uuid';
 
+// import closeImg from "../assets/close.png"
+
+import "./ToDoItem.css";
+
 export default function ToDoItem() {
     let [todo, setTodo] = useState("");
     let [tasks, setTasks] = useState([]);
@@ -10,12 +14,6 @@ export default function ToDoItem() {
     let handleTodo = (e) => {
         setTodo(e.target.value);
     }
-
-    // let todos = ["eat", "sleep", "code", "repeat"];
-
-    // const list = todos.map((todo, key) => {
-    //     return <li key={uuidv4()}>{todo}</li>
-    // });
 
     let update = () => {
         setTasks((prevTask) => {
@@ -25,7 +23,7 @@ export default function ToDoItem() {
                 done: false,
             }];
         });
-        // console.log(todo);
+        
         setTodo("");
     }
 
@@ -51,25 +49,29 @@ export default function ToDoItem() {
     }
 
     return (
-        <div>
-            <h3>ToDo</h3>
+        <div className='container'>
+            <h3>Tasks to do: </h3>
             <div className="input">
                 <TextField value={todo} onChange={handleTodo} id="outlined-basic" label="New Task" variant="outlined" />
                 <Button onClick={update} variant="contained">Add</Button>
             </div>
 
-            <ul>
+            <ol className='list'>
                 {
                     tasks.map((task) => (
                         <li key={task.id}>
                             <span className={task.done ? "done" : null}>{task.task}</span>
-                            <Button onClick={() => deleteTask(task.id)} variant="contained">Delete</Button>
-                            <Button onClick={() => markAsDone(task.id)} variant="contained">Done</Button>
+                            <div className="img-div">
+                                <img src="/assets/check.png" onClick={() => markAsDone(task.id)} alt="" />
+                                <img src="/assets/close.png" onClick={() => deleteTask(task.id)} alt="" />
+                            </div>
+                            {/* <Button onClick={() => deleteTask(task.id)} variant="contained">Delete</Button>
+                            <Button onClick={() => markAsDone(task.id)} variant="contained">Done</Button> */}
                         </li>
 
                     ))
                 }
-            </ul>
+            </ol>
         </div>
     );
 }
