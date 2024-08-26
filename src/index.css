@@ -9,12 +9,14 @@
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
 
+  background-color: #e4e4e456;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  border: 2px solid red;
+  display: flex;
+  padding-left: 8%;
 }
 
 a {
@@ -29,12 +31,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  
-
-  border: 2px solid;
 }
 
 h1 {

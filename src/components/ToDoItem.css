@@ -2,10 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: flex-start; */
-
-    border: 2px solid;
     width: fit-content;
+    align-items: flex-start;
 }
 
 .input {
@@ -27,11 +25,11 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px dashed black;
+    border: 2px dashed rgba(0, 0, 0, 0.434);
     border-radius: 5px;
-    padding: 5px 20px;
-    margin: 15px 0;
-    font-size: 25px;
+    padding: 0px 20px;
+    margin: 8px 0;
+    font-size: 20px;
     letter-spacing: 2px;
     width: fit-content;
 }
@@ -41,10 +39,10 @@ li .img-div {
     align-items: center;
 }
 img {
-    width: 40px;
+    width: 30px;
     padding: 0;
-    margin: 0 10px;
-    background-color: rgba(56, 55, 55, 0.306);
+    margin-left: 10px;
+    background-color: rgba(56, 55, 55, 0.153);
     border-radius: 5px;
 }
 

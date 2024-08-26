@@ -31,7 +31,7 @@ export default function ToDoItem() {
         setTasks(
             tasks.filter((task) =>
                 task.id != currId
-            ));
+        ));
     }
 
     let markAsDone = (currId) => {
