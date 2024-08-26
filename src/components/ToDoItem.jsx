@@ -16,6 +16,10 @@ export default function ToDoItem() {
     }
 
     let update = () => {
+        if (todo.trim() === "") {
+            alert("Task cannot be empty");
+            return;
+        }
         setTasks((prevTask) => {
             return [...prevTask, {
                 task: todo,
