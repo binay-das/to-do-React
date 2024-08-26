@@ -9,14 +9,14 @@
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
 
-  background-color: #e4e4e456;
+  /* background-color: #e4e4e456;/ */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  padding-left: 8%;
+  padding-left: 5%;
 }
 
 a {

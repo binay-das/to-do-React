@@ -1,4 +1,5 @@
 // import InputBox from "./InputBox";
+import Theme from "./Theme";
 import ToDoItem from "./ToDoItem";
 
 export default function ToDo () {
@@ -6,6 +7,7 @@ export default function ToDo () {
         <div>
             <h1>To Do tasks</h1>
             {/* <InputBox /> */}
+            {/* <Theme /> */}
             <ToDoItem />
         </div>
     );

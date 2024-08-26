@@ -3,9 +3,12 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { v4 as uuidv4 } from 'uuid';
 
+
 // import closeImg from "../assets/close.png"
 
 import "./ToDoItem.css";
+let lightUrl = "../assets/lightTheme.png";
+let darkUrl = "../assets/darkTheme.png";
 
 export default function ToDoItem() {
     let [todo, setTodo] = useState("");
@@ -13,6 +16,12 @@ export default function ToDoItem() {
 
     let handleTodo = (e) => {
         setTodo(e.target.value);
+    }
+
+    let [theme, setTheme] = useState(false);
+    let themeToggle = () => {
+        setTheme(!theme);
+        console.log(theme);
     }
 
     let update = () => {
@@ -27,7 +36,7 @@ export default function ToDoItem() {
                 done: false,
             }];
         });
-        
+
         setTodo("");
     }
 
@@ -35,7 +44,7 @@ export default function ToDoItem() {
         setTasks(
             tasks.filter((task) =>
                 task.id != currId
-        ));
+            ));
     }
 
     let markAsDone = (currId) => {
@@ -54,6 +63,10 @@ export default function ToDoItem() {
 
     return (
         <div className='container'>
+            <div className="mode">
+                {theme ? <img onClick={themeToggle} src={lightUrl} alt="light_mode" /> : <img onClick={themeToggle} src={darkUrl} alt="dark_mode" />}
+                
+            </div>
             <h3>Tasks to do: </h3>
             <div className="input">
                 <TextField value={todo} onChange={handleTodo} id="outlined-basic" label="New Task" variant="outlined" />
