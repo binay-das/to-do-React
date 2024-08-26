@@ -4,12 +4,22 @@
     justify-content: center;
     width: fit-content;
     align-items: flex-start;
+
+
+    border: 2px solid;
+    position:relative;
+    margin: 0 auto;
 }
 
 .input {
     display: flex;
     padding: 0 50px;
     justify-content: space-between;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .list {
@@ -20,6 +30,8 @@
     align-items: flex-start;
     padding: 0;
     margin-left: 20px;
+
+    border: 2px solid;
 }
 li {
     display: flex;
@@ -32,6 +44,8 @@ li {
     font-size: 20px;
     letter-spacing: 2px;
     width: fit-content;
+    width: 35vw;
+    overflow:auto;
 }
 li .img-div {
     display: flex;
@@ -53,5 +67,3 @@ img:hover {
 .done {
     text-decoration: line-through dashed;
 }
-
-
