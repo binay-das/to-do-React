@@ -63,32 +63,35 @@ export default function ToDoItem() {
 
     return (
         <div className='container'>
-            <div className="mode">
+            {/* <div className="mode">
                 {theme ? <img onClick={themeToggle} src={lightUrl} alt="light_mode" /> : <img onClick={themeToggle} src={darkUrl} alt="dark_mode" />}
                 
-            </div>
-            <h3>Tasks to do: </h3>
+            </div> */}
+            <h1>Tasks to do: </h1>
             <div className="input">
-                <TextField value={todo} onChange={handleTodo} id="outlined-basic" label="New Task" variant="outlined" />
+                <TextField sx={{width: 300}} value={todo} onChange={handleTodo} id="outlined-basic" label="New Task" variant="outlined" />
                 <Button onClick={update} variant="contained">Add</Button>
             </div>
 
-            <ol className='list'>
+            <ul className='list'>
                 {
                     tasks.map((task) => (
                         <li key={task.id}>
-                            <span className={task.done ? "done" : null}>{task.task}</span>
-                            <div className="img-div">
+                            <span id='text-field' className={task.done ? "done" : null}>{task.task}</span>
+                            {/* <div className="img-div">
                                 <img src="/assets/check.png" onClick={() => markAsDone(task.id)} alt="" />
                                 <img src="/assets/close.png" onClick={() => deleteTask(task.id)} alt="" />
+                            </div> */}
+
+                            <div className="btn-div">
+                                <Button onClick={() => markAsDone(task.id)} variant="contained">Done</Button>
+                                <Button onClick={() => deleteTask(task.id)} variant="contained">Delete</Button>
                             </div>
-                            {/* <Button onClick={() => deleteTask(task.id)} variant="contained">Delete</Button>
-                            <Button onClick={() => markAsDone(task.id)} variant="contained">Done</Button> */}
                         </li>
 
                     ))
                 }
-            </ol>
+            </ul>
         </div>
     );
 }

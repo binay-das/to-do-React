@@ -2,57 +2,62 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: fit-content;
-    align-items: flex-start;
-
-
-    border: 2px solid;
-    position:relative;
-    margin: 0 auto;
+    width: 700px;
+    align-items: center;
+    background-color: #cdf8f0a9;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 0.5px solid #69efd7a9;
 }
 
 .input {
     display: flex;
-    padding: 0 50px;
-    justify-content: space-between;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    justify-content: center;
+    width: fit-content;
+}
+.input button {
+    margin-left: 10px;
 }
 
+
 .list {
-    list-style-type: decimal;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
     padding: 0;
-    margin-left: 20px;
-
-    border: 2px solid;
+    background: #bcfff4;
 }
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px dashed rgba(0, 0, 0, 0.434);
-    border-radius: 5px;
-    padding: 0px 20px;
-    margin: 8px 0;
-    font-size: 20px;
-    letter-spacing: 2px;
-    width: fit-content;
-    width: 35vw;
-    overflow:auto;
+    /* border: 2px dashed rgba(0, 0, 0, 0.434); */
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 450px;
+    scrollbar-width: 1px;
+    background-color: #abd0f6;
 }
-li .img-div {
+.list li #text-field {
+    overflow-x: auto;
+    scrollbar-width: 1px;
+}
+li .btn-div {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: 0;
 }
-img {
+
+li .btn-div button {
+    margin-left: 5px;
+    
+}
+/* img {
     width: 30px;
     padding: 0;
     margin-left: 10px;
@@ -62,8 +67,8 @@ img {
 
 img:hover {
     cursor: pointer;
-}
+} */
 
 .done {
-    text-decoration: line-through dashed;
+    text-decoration: line-through;
 }
