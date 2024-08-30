@@ -61,3 +61,38 @@ li .btn-div button {
 .done {
     text-decoration: line-through;
 }
+
+@media (width <= 700px) {
+    .container{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    li {
+        margin-left: 0;
+        margin-right: 0;
+
+        width: 90vw;
+    }
+    .list {
+        /* display: flex; */
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+    }
+    .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .input button {
+        margin: 10px 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    } 
+}
